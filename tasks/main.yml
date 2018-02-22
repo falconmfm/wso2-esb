@@ -21,7 +21,7 @@
     validate: 'visudo -cf %s'
     mode: 0440
   
-- include: centos-main.yml
+- import_tasks: centos-main.yml
   when: ansible_os_family == 'RedHat'
 
 - name: Check if the version already exists on the remote system.
